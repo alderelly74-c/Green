@@ -1,0 +1,6 @@
+{
+  "name": "GreenShift Fleet Command",
+  "description": "Kenyan mixed-fleet management platform for electric and fuel vehicles with live tracking, driver management, M-Pesa financials, EV battery telemetry, and GreenShift Fleet AI assistant.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "vehicles": {
+      "title": "Vehicles",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "registrationNumber": { "type": "string" },
+        "make": { "type": "string" },
+        "model": { "type": "string" },
+        "fuelType": { "type": "string" }
+      }
+    },
+    "drivers": {
+      "title": "Drivers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "phone": { "type": "string" }
+      }
+    },
+    "messages": {
+      "title": "Messages",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "subject": { "type": "string" },
+        "content": { "type": "string" }
+      }
+    }
+  }
+}

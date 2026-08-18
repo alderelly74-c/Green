@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  :root, body {
+    font-family: 'Outfit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* =========================================================================
+   HIGH-CONTRAST DARK MODE / NIGHT OPERATIONS PALETTE
+   Optimized for low-light fleet command centers & nocturnal operations
+   ========================================================================= */
+html.dark,
+html.dark body,
+html[data-theme="high-contrast"],
+html[data-theme="high-contrast"] body {
+  background-color: #030712 !important; /* Deep Onyx Night */
+  color: #f8fafc !important; /* Pure Off-White High Contrast */
+}
+
+/* High Contrast Main Layout Shells & Containers */
+html.dark .bg-slate-50,
+html[data-theme="high-contrast"] .bg-slate-50 {
+  background-color: #030712 !important;
+}
+
+html.dark .bg-white,
+html[data-theme="high-contrast"] .bg-white {
+  background-color: #090e1a !important; /* Midnight Carbon Panel */
+}
+
+html.dark .bg-slate-100,
+html[data-theme="high-contrast"] .bg-slate-100 {
+  background-color: #0f172a !important; /* Elevated Surface */
+}
+
+html.dark .bg-slate-200,
+html[data-theme="high-contrast"] .bg-slate-200 {
+  background-color: #1e293b !important;
+}
+
+/* High Contrast Borders & Dividers */
+html.dark .border-slate-100,
+html[data-theme="high-contrast"] .border-slate-100 {
+  border-color: #1e293b !important;
+}
+
+html.dark .border-slate-200,
+html[data-theme="high-contrast"] .border-slate-200 {
+  border-color: #27354a !important;
+}
+
+html.dark .border-slate-300,
+html[data-theme="high-contrast"] .border-slate-300 {
+  border-color: #3b4d66 !important;
+}
+
+/* High Contrast High Legibility Text Colors */
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html[data-theme="high-contrast"] .text-slate-900,
+html[data-theme="high-contrast"] .text-slate-800 {
+  color: #ffffff !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600,
+html[data-theme="high-contrast"] .text-slate-700,
+html[data-theme="high-contrast"] .text-slate-600 {
+  color: #cbd5e1 !important; /* Crisp Light Gray */
+}
+
+html.dark .text-slate-500,
+html[data-theme="high-contrast"] .text-slate-500 {
+  color: #94a3b8 !important; /* Muted Secondary */
+}
+
+html.dark .text-slate-400,
+html[data-theme="high-contrast"] .text-slate-400 {
+  color: #8191a6 !important;
+}
+
+/* Inputs, Selects & Textareas in Night Mode */
+html.dark input:not([type="checkbox"]):not([type="radio"]),
+html.dark select,
+html.dark textarea,
+html[data-theme="high-contrast"] input:not([type="checkbox"]):not([type="radio"]),
+html[data-theme="high-contrast"] select,
+html[data-theme="high-contrast"] textarea {
+  background-color: #0b1120 !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder,
+html[data-theme="high-contrast"] input::placeholder,
+html[data-theme="high-contrast"] textarea::placeholder {
+  color: #64748b !important;
+}
+
+html.dark select option,
+html[data-theme="high-contrast"] select option {
+  background-color: #0b1120 !important;
+  color: #f8fafc !important;
+}
+
+/* Interactive Card & Button Hover States in Dark Mode */
+html.dark .hover\:bg-slate-50:hover,
+html[data-theme="high-contrast"] .hover\:bg-slate-50:hover {
+  background-color: #0f172a !important;
+}
+
+html.dark .hover\:bg-slate-100:hover,
+html[data-theme="high-contrast"] .hover\:bg-slate-100:hover {
+  background-color: #1a2438 !important;
+}
+
+html.dark .hover\:bg-slate-200:hover,
+html[data-theme="high-contrast"] .hover\:bg-slate-200:hover {
+  background-color: #243048 !important;
+}
+
+/* Accent Badge Dark Tuning (Keeps vivid vibrancy with dark backdrops) */
+html.dark .bg-emerald-50,
+html[data-theme="high-contrast"] .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+}
+
+html.dark .bg-emerald-100,
+html[data-theme="high-contrast"] .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.2) !important;
+  color: #6ee7b7 !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+html.dark .text-emerald-800,
+html.dark .text-emerald-900,
+html[data-theme="high-contrast"] .text-emerald-800,
+html[data-theme="high-contrast"] .text-emerald-900 {
+  color: #34d399 !important;
+}
+
+html.dark .bg-amber-50,
+html[data-theme="high-contrast"] .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+  color: #fbbf24 !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+html.dark .bg-amber-100,
+html[data-theme="high-contrast"] .bg-amber-100 {
+  background-color: rgba(245, 158, 11, 0.2) !important;
+  color: #fde68a !important;
+}
+
+html.dark .text-amber-800,
+html.dark .text-amber-900,
+html[data-theme="high-contrast"] .text-amber-800,
+html[data-theme="high-contrast"] .text-amber-900 {
+  color: #fbbf24 !important;
+}
+
+html.dark .bg-red-50,
+html[data-theme="high-contrast"] .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.12) !important;
+  color: #f87171 !important;
+  border-color: rgba(239, 68, 68, 0.35) !important;
+}
+
+html.dark .bg-red-100,
+html[data-theme="high-contrast"] .bg-red-100 {
+  background-color: rgba(239, 68, 68, 0.2) !important;
+  color: #fca5a5 !important;
+}
+
+html.dark .text-red-800,
+html.dark .text-red-900,
+html[data-theme="high-contrast"] .text-red-800,
+html[data-theme="high-contrast"] .text-red-900 {
+  color: #f87171 !important;
+}
+
+html.dark .bg-teal-50,
+html[data-theme="high-contrast"] .bg-teal-50 {
+  background-color: rgba(20, 184, 166, 0.12) !important;
+  color: #2dd4bf !important;
+  border-color: rgba(20, 184, 166, 0.35) !important;
+}
+
+html.dark .text-teal-800,
+html.dark .text-teal-900,
+html[data-theme="high-contrast"] .text-teal-800,
+html[data-theme="high-contrast"] .text-teal-900 {
+  color: #2dd4bf !important;
+}
+
+html.dark .bg-blue-50,
+html.dark .bg-indigo-50,
+html[data-theme="high-contrast"] .bg-blue-50,
+html[data-theme="high-contrast"] .bg-indigo-50 {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  color: #818cf8 !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+/* Tactical Night Vision / High Contrast Radar Filter for Leaflet Maps */
+html.dark .leaflet-tile-pane,
+html[data-theme="high-contrast"] .leaflet-tile-pane {
+  filter: brightness(0.7) invert(1) contrast(2.5) hue-rotate(200deg) saturate(0.4) brightness(0.75);
+}
+
+html.dark .leaflet-container,
+html[data-theme="high-contrast"] .leaflet-container {
+  background: #060b14 !important;
+}
+
+/* Sleek Dark Mode Custom Scrollbars */
+html.dark ::-webkit-scrollbar,
+html[data-theme="high-contrast"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.dark ::-webkit-scrollbar-track,
+html[data-theme="high-contrast"] ::-webkit-scrollbar-track {
+  background: #060a12;
+}
+
+html.dark ::-webkit-scrollbar-thumb,
+html[data-theme="high-contrast"] ::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid #334155;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover,
+html[data-theme="high-contrast"] ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+@keyframes pulseGlowOnTrip {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes pulseGlowCharging {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(20, 184, 166, 0);
+  }
+}
+
+@keyframes subtleBeaconPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.35);
+  }
+}
+
+.animate-status-ontrip {
+  animation: pulseGlowOnTrip 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-status-charging {
+  animation: pulseGlowCharging 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-beacon-dot {
+  animation: subtleBeaconPulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
